@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Proyecto Vue.js pro cdn</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div class="app">
+        {{ message }}
+    </div>
+
+    <script>
+        var app = new Vue ({
+            // Este es el elemento que se toma para modificar (DOM)
+            el: '.app',
+            // Esta es la data con la que se nutre el elemento. Por consola ingresando app.message="Otra cosa" se ve la reactividad cambiando instantáneamente el mensaje mostrado en pantalla
+            data: {
+                message: 'Holis! Ah Vue jsjsjsjsj'
+            }
+        })
+    </script>
+</body>
+</html>

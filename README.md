@@ -44,27 +44,22 @@ Versión 1.0
 
 
 <h2>Sobre el proyecto</h2>
-Descripción más extensa del proyecto, donde se detalle lo siguiente:
-
-- Problema que resuelve
-- Objetivos
+Práctica de Vue.js según documentación de <a href="https://vuejs.org/guide/introduction.html">framework</a> 
 
 <strong><p align="right"><a href="#top">Volver 👆🏻</a></p></strong>
 
 <h2>Librerías</h2>
 Esta sección tendría que listar cualquier framework o librería usada para el proyecto. Dejar cualquier add-on o plugin para la sección de reconocimientos.
 
-* Bootstrap
-* Laravel
-* Tailwind css
-* Mustache
+* Vue.js
 
 <strong><p align="right"><a href="#top">Volver 👆🏻</a></p></strong>
 
 <h2>Empezando</h2>
-Este puede ser un ejemplo de como podrías dar las instrucciones para levantar tu proyecto localmente. Para tener una copia local hay que correr los siguientes pasos de ejemplo.
+Pasos y requisitos a tener en cuenta para tener una copia local.
+
 <h3>Prerrequisitos</h3>
-Este es un ejemplo de cómo listar cosas que necesitas para usar el software y como instalarlos.
+Vue.js funciona con el entorno de ejecución para JavaScript de Node.js. Para eso descargar el paquete en el siguiente <a href="https://nodejs.org/es">link</a> y a continuación, desde tu terminal, insertar el siguiente comando.
 
 ```
 npm install npm@latest -g
@@ -73,21 +68,34 @@ npm install npm@latest -g
 <strong><p align="right"><a href="#top">Volver 👆🏻</a></p></strong>
 
 <h3>Instalación</h3>
-En esta sección se deja un ejemplo de cómo se puede instruir en instalar y configurar la aplicación. 
+Una vez que tenemos instalado el entorno, podemos pasar a crear un proyecto vue con los siguientes pasos:
 
-1. Obtener la API Key en la siguiente página [https://example.com](https://example.com)
-2. Clonar el repo
+1. Instalar Vue.js
    ```
-   git clone https://github.com/usuario/proyecto
+   npm init vue@latest
    ```
-3. Instalar los paquetes de NPM 
+   A continuación te pedirá que indiques el nombre del proyecto y presentará varias opciones para seleccionar:
    ```
+   ✔ Project name: … <your-project-name>
+   ✔ Add TypeScript? … No / Yes
+   ✔ Add JSX Support? … No / Yes
+   ✔ Add Vue Router for Single Page Application development? … No / Yes
+   ✔ Add Pinia for state management? … No / Yes
+   ✔ Add Vitest for Unit testing? … No / Yes
+   ✔ Add an End-to-End Testing Solution? … No / Cypress / Playwright
+   ✔ Add ESLint for code quality? … No / Yes
+   ✔ Add Prettier for code formatting? … No / Yes
+    
+   Scaffolding project in ./<your-project-name>...
+   Done.
+   ```
+2. Una vez finalizada la instalación, moverse a la carpeta de proyecto, instalar las dependencias y empezar el dev server
+   ```
+   cd <your-project-name>
    npm install
+   npm run dev
    ```
-4. Ingresar la API Key en el archivo `config.js`
-   ```
-   const API_KEY = 'TU API';
-   ```
+
 
 <strong><p align="right"><a href="#top">Volver 👆🏻</a></p></strong>
 
