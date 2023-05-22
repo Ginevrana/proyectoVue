@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Proyecto Vue.js por CDN - Bucles</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+    <h1>Bucles y arreglos</h1>
+
+    <div class="app4">
+        Uso de v-for con Arrays/arreglos
+        
+        <!-- Primer ejemplo v-for básico usando una lista ordenada -->
+        <ol>
+            <li v-for="color in colores"> {{ color.nombre }} </li>
+        </ol>
+
+        <!-- Segundo ejemplo v-for con indice usando una lista no ordenada 
+        Para modificarlo en consola usamos el siguiente formato: app4.paises[numeroDeIndice]-->
+        <ul>
+            <li v-for="(pais, index) in paises">
+                {{ index }} - {{ pais.nombre }}
+            </li>
+        </ul>
+
+        <!-- Tercer ejemplo v-for con objetos y uso de value 
+        Para modificarlo en consola usamos el siguiente formato: app4.objeto.nombre por ejemplo -->
+        <ul>
+            <li v-for="value in objeto">
+                {{ value }}
+            </li>
+        </ul>
+        
+        <!-- Cuarto ejemplo v-for con uso de value y key -->
+        <ul>
+            <li v-for="(value, key) in objeto">
+                {{ key }} : {{ value }}
+            </li>
+        </ul>
+        
+        <!-- Quinto ejemplo v-for con uso de índice, valor y clave -->
+        <ul>
+            <li v-for="(value, key, index) in objeto">
+                {{ index }} - {{ key }} : {{ value }}
+            </li>
+        </ul>
+        
+        <!-- Quinto ejemplo v-for manejo de rangos de enteros -->
+        <div>
+            <span v-for="n in 10"> {{ n }} <br></span>
+        </div>
+
+    </div>
+
+
+    <script>
+        var app4= new Vue ({
+            el: '.app4',
+            data: {
+                colores: [
+                    {nombre:'Azul'},
+                    {nombre:'Blanco'},
+                    {nombre:'Verde'},
+                ],
+                paises: [
+                    {nombre:'Argentina'},
+                    {nombre:'Australia'},
+                    {nombre:'Nueva Zelanda'},
+                ],
+                objeto: {
+                    nombre: 'Juan',
+                    apellido: 'Perez',
+                    edad: 30
+                }
+            }
+        })
+    </script>
+</body>
+</html>
