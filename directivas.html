@@ -6,18 +6,34 @@
 </head>
 <body>
     <div class="app">
+        <!-- Para mostrar un popover -->
         <span v-bind:title="message">
             Hover your mouse over me for a few seconds to see my dinamically bound title.
         </span>
+
+        <!-- Para mostrar un texto -->
+        <h1> {{ message2 }} </h1>
+        <h4 v-text="message2"></h4>
+
+        <!-- Para sincronizar el contenido de una variable con el contenido input -->
+        <input type="text" v-model="message3">
+        <h3>Texto ingresado: {{ message3 }}</h3>
     </div>
 
     <script>
         var app = new Vue({
             el:".app",
             data: { 
-                message: 'You loaded this page on ' + new Date().toLocaleString()
+                message: 'You loaded this page on ' + new Date().toLocaleString(),
+                message2: 'Texto de mensaje 2',
+                message3: 'Texto de mensaje 3'
             }
         })
     </script>
+
+    <!--
+        Renderizado declarativo: Vue extiende el HTML estándar con una sintaxis de plantilla que nos permite describir declarativamente la salida HTML basada en el estado JavaScript.
+        Reactividad: Vue rastrea automáticamente los cambios de estado de JavaScript y actualiza de manera eficiente el DOM cuando ocurren cambios. 
+    -->
 </body>
 </html>
