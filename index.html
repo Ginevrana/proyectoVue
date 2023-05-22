@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Proyecto Vue.js pro cdn</title>
+    <title>Proyecto Vue.js por CDN - Intro</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <div class="app">
-        {{ message }}
+        {{ message }} <br>
+        {{ message2 }}
+    </div>
+
+    <div class="app2">
+        {{ message3 }}
     </div>
 
     <script>
         var app = new Vue ({
             // Este es el elemento que se toma para modificar (DOM)
             el: '.app',
-            // Esta es la data con la que se nutre el elemento. Por consola ingresando app.message="Otra cosa" se ve la reactividad cambiando instantáneamente el mensaje mostrado en pantalla
+            // Esta es la data con la que se nutre el elemento. Por consola ingresando app.message="Otra cosa" se ve la reactividad cambiando instantáneamente el mensaje mostrado en pantalla. Datos y DOM vinculados, interpolación.
             data: {
-                message: 'Holis! Ah Vue jsjsjsjsj'
+                message: 'Holis! Ah Vue jsjsjsjsj',
+                message2: '¿Cómo estás?'
+            }
+        })
+
+        var app2 = new Vue ({
+            el: '.app2',
+            data: {
+                message3: 'Soy el tercer mensaje!'
             }
         })
     </script>
